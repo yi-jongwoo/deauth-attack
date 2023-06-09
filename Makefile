@@ -1,7 +1,7 @@
 all: deauth-attack
 
 deauth-attack: main.o proto_structures.o
-	g++ main.o proto_structures.o -o deauth-attack
+	g++ main.o proto_structures.o -o deauth-attack -lpcap
 
 main.o: main.cpp proto_structures.h
 	g++ main.cpp -c -o main.o
